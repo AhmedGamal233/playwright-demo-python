@@ -1,0 +1,11 @@
+pipeline {
+    agent { docker { image 'playw_python' } }
+stages {
+    stage('Build Docker Image') {  
+    steps{                     
+    sh 'docker-compose build'     
+    echo 'Docker-compose-build Build Image Completed'                
+    }           
+}
+}
+}
