@@ -10,6 +10,14 @@ def browser() -> Browser:
     # Start playwright
     browser: Playwright = sync_playwright().start()
     # Get browser information from config.py
+    #     # Read in the file
+    # with open('pytest.ini', 'r') as file :
+    #     filedata = file.read()
+    #     # Replace the target string
+    #     filedata = filedata.replace(filedata.split('browserName =', 1)[1], 'chrome')
+    # # Write the file out again
+    # with open('pytest.ini', 'w') as file:
+    #     file.write(filedata)
     browser_info: dict = get_browser(browserName())
     # Get launcher attributes and set the browser as defined in broser_info
     launcher: BrowserType = getattr(browser, browser_info["browser"])
