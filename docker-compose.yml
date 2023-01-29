@@ -12,5 +12,5 @@ services:
   setup:
     build:
       context: .
-      dockerfile: Dockerfile2
+      dockerfile: Dockerfile
     image: playw_python

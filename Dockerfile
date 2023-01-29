@@ -51,6 +51,7 @@ RUN pip install --upgrade pip && \
     . /opt/venv/bin/activate && \
     python3.7 -m pip install -r requirements.txt --quiet && \
     python3.7 -m playwright install && \
-    python3.7 -m playwright install-deps
+    python3.7 -m playwright install-deps &&\
+    playwright install
 
 WORKDIR /app

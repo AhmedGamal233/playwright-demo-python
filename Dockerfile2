@@ -29,4 +29,5 @@ ADD pages /usr/src
 # ADD allure-results /usr
 ADD execute_tests.sh /usr
 RUN pip install --upgrade pip
+RUN playwright install
 RUN pip install --no-cache-dir -r requirements.txt
