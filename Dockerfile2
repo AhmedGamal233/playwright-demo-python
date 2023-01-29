@@ -26,7 +26,7 @@ WORKDIR /usr/src/test
 
 ADD pages /usr/src
 # ADD venv /usr
-ADD allure-results /usr
+# ADD allure-results /usr
 ADD execute_tests.sh /usr
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt

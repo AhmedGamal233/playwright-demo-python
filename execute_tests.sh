@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source venv/bin/activate
 echo "-> Installing dependencies"
-pip3 install -r requirements.txt --quiet
+pip3 install -r requirements.txt --quiet --user
 
 echo "-> Removing old Allure results"
 rm -r allure-results/* || echo "No results"

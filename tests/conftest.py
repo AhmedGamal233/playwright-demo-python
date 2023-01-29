@@ -15,7 +15,7 @@ def browser() -> Browser:
     launcher: BrowserType = getattr(browser, browser_info["browser"])
     # Launch browser
     return launcher.launch(
-        headless=False, channel=browser_info.get("channel"),slow_mo=1000
+        headless=True, channel=browser_info.get("channel"),slow_mo=1000
     )
 
 @pytest.fixture(scope="session")
