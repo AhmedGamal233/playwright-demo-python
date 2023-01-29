@@ -1,0 +1,57 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "playwright._impl._api_types.Error: \n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\n=========================== logs ===========================\n<launching> /root/.cache/ms-playwright/chromium-1033/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-gpdkda --remote-debugging-pipe --no-startup-window\n<launched> pid=275\n[pid=275][err] [275:275:0121/160128.287124:ERROR:ozone_platform_x11.cc(238)] Missing X server or $DISPLAY\n[pid=275][err] [275:275:0121/160128.287183:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.\n============================================================",
+      "children" : [ {
+        "name" : "Search Results",
+        "uid" : "1eb58c89e04f7cf5",
+        "parentUid" : "0a2c578110230e98a7ce59acb086d47b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1674316887846,
+          "stop" : 1674316887846,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ "' at DuckDuckGo'", "'python'" ]
+      } ],
+      "uid" : "0a2c578110230e98a7ce59acb086d47b"
+    }, {
+      "name" : "playwright._impl._api_types.Error: \n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\n=========================== logs ===========================\n<launching> /root/.cache/ms-playwright/chromium-1033/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-qtKr29 --remote-debugging-pipe --no-startup-window\n<launched> pid=274\n[pid=274][err] [274:274:0121/160128.287229:ERROR:ozone_platform_x11.cc(238)] Missing X server or $DISPLAY\n[pid=274][err] [274:274:0121/160128.287284:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.\n============================================================",
+      "children" : [ {
+        "name" : "Search Results",
+        "uid" : "6cafe7dc39dec4b",
+        "parentUid" : "12763e126112b4990d1fdf25539345f9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1674316887846,
+          "stop" : 1674316887846,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ "' at DuckDuckGo'", "'polar bear'" ]
+      } ],
+      "uid" : "12763e126112b4990d1fdf25539345f9"
+    }, {
+      "name" : "playwright._impl._api_types.Error: \n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\n=========================== logs ===========================\n<launching> /root/.cache/ms-playwright/chromium-1033/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-gwELP9 --remote-debugging-pipe --no-startup-window\n<launched> pid=276\n[pid=276][err] [276:276:0121/160128.287208:ERROR:ozone_platform_x11.cc(238)] Missing X server or $DISPLAY\n[pid=276][err] [276:276:0121/160128.287260:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.\n============================================================",
+      "children" : [ {
+        "name" : "Search Results",
+        "uid" : "3ccd96d6c6ed5b96",
+        "parentUid" : "652fdb47b002436e893b5b3352f609f9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1674316887848,
+          "stop" : 1674316887848,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ "' at DuckDuckGo'", "'panda'" ]
+      } ],
+      "uid" : "652fdb47b002436e893b5b3352f609f9"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

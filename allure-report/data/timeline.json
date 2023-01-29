@@ -1,0 +1,57 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "2282cb13cffc",
+    "children" : [ {
+      "name" : "16-MainThread",
+      "children" : [ {
+        "name" : "Search Results",
+        "uid" : "3ccd96d6c6ed5b96",
+        "parentUid" : "05c39c0e8793d36bcf6b4ee0e01bb53a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1674316887848,
+          "stop" : 1674316887848,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ "' at DuckDuckGo'", "'panda'" ]
+      } ],
+      "uid" : "05c39c0e8793d36bcf6b4ee0e01bb53a"
+    }, {
+      "name" : "19-MainThread",
+      "children" : [ {
+        "name" : "Search Results",
+        "uid" : "1eb58c89e04f7cf5",
+        "parentUid" : "7b8124d9792c6c05d2f0d48c779b4492",
+        "status" : "broken",
+        "time" : {
+          "start" : 1674316887846,
+          "stop" : 1674316887846,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ "' at DuckDuckGo'", "'python'" ]
+      } ],
+      "uid" : "7b8124d9792c6c05d2f0d48c779b4492"
+    }, {
+      "name" : "22-MainThread",
+      "children" : [ {
+        "name" : "Search Results",
+        "uid" : "6cafe7dc39dec4b",
+        "parentUid" : "36858f8c35a13ddaef9ab10bcdbbfd54",
+        "status" : "broken",
+        "time" : {
+          "start" : 1674316887846,
+          "stop" : 1674316887846,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ "' at DuckDuckGo'", "'polar bear'" ]
+      } ],
+      "uid" : "36858f8c35a13ddaef9ab10bcdbbfd54"
+    } ],
+    "uid" : "747dac6004279b5b58cb3a752080f7e3"
+  } ],
+  "name" : "timeline"
+}

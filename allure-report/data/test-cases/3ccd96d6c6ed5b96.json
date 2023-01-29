@@ -1,0 +1,150 @@
+{
+  "uid" : "3ccd96d6c6ed5b96",
+  "name" : "Search Results",
+  "fullName" : "tests.test_demo.TestSearch#test_basic",
+  "historyId" : "1c52c1384d446a291a72b615ea3c3ada",
+  "time" : {
+    "start" : 1674316887848,
+    "stop" : 1674316887848,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "playwright._impl._api_types.Error: \n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\n=========================== logs ===========================\n<launching> /root/.cache/ms-playwright/chromium-1033/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-gwELP9 --remote-debugging-pipe --no-startup-window\n<launched> pid=276\n[pid=276][err] [276:276:0121/160128.287208:ERROR:ozone_platform_x11.cc(238)] Missing X server or $DISPLAY\n[pid=276][err] [276:276:0121/160128.287260:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.\n============================================================",
+  "statusTrace" : "@pytest.fixture(scope=\"session\")\n    def browser() -> Browser:\n        # Start playwright\n        browser: Playwright = sync_playwright().start()\n        # Get browser information from config.py\n        browser_info: dict = get_browser(browserName())\n        # Get launcher attributes and set the browser as defined in broser_info\n        launcher: BrowserType = getattr(browser, browser_info[\"browser\"])\n        # Launch browser\n        return launcher.launch(\n>           headless=False, channel=browser_info.get(\"channel\"),slow_mo=500\n        )\n\ntests/conftest.py:18: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/usr/lib/python3.7/site-packages/playwright/sync_api/_generated.py:12869: in launch\n    firefoxUserPrefs=mapping.to_impl(firefox_user_prefs),\n/usr/lib/python3.7/site-packages/playwright/_impl/_browser_type.py:93: in launch\n    Browser, from_channel(await self._channel.send(\"launch\", params))\n/usr/lib/python3.7/site-packages/playwright/_impl/_connection.py:45: in send\n    lambda: self.inner_send(method, params, False)\n/usr/lib/python3.7/site-packages/playwright/_impl/_connection.py:419: in wrap_api_call\n    return await cb()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <playwright._impl._connection.Channel object at 0x7f033f7f1650>\nmethod = 'launch', params = {'headless': False, 'slowMo': 500}\nreturn_as_dict = False\n\n    async def inner_send(\n        self, method: str, params: Optional[Dict], return_as_dict: bool\n    ) -> Any:\n        if params is None:\n            params = {}\n        callback = self._connection._send_message_to_server(self._guid, method, params)\n        if self._connection._error:\n            error = self._connection._error\n            self._connection._error = None\n            raise error\n        done, _ = await asyncio.wait(\n            {\n                self._connection._transport.on_error_future,\n                callback.future,\n            },\n            return_when=asyncio.FIRST_COMPLETED,\n        )\n        if not callback.future.done():\n            callback.future.cancel()\n>       result = next(iter(done)).result()\nE       playwright._impl._api_types.Error: \nE       ╔════════════════════════════════════════════════════════════════════════════════════════════════╗\nE       ║ Looks like you launched a headed browser without having a XServer running.                     ║\nE       ║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\nE       ║                                                                                                ║\nE       ║ <3 Playwright Team                                                                             ║\nE       ╚════════════════════════════════════════════════════════════════════════════════════════════════╝\nE       =========================== logs ===========================\nE       <launching> /root/.cache/ms-playwright/chromium-1033/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-gwELP9 --remote-debugging-pipe --no-startup-window\nE       <launched> pid=276\nE       [pid=276][err] [276:276:0121/160128.287208:ERROR:ozone_platform_x11.cc(238)] Missing X server or $DISPLAY\nE       [pid=276][err] [276:276:0121/160128.287260:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.\nE       ============================================================\n\n/usr/lib/python3.7/site-packages/playwright/_impl/_connection.py:79: Error",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1674316887850,
+      "stop" : 1674316887850,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1674316887852,
+      "stop" : 1674316887856,
+      "duration" : 4
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1674316887856,
+      "stop" : 1674316887856,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "delete_output_dir",
+    "time" : {
+      "start" : 1674316887850,
+      "stop" : 1674316887851,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1674316887856,
+      "stop" : 1674316888314,
+      "duration" : 458
+    },
+    "status" : "broken",
+    "statusMessage" : "playwright._impl._api_types.Error: \n╔════════════════════════════════════════════════════════════════════════════════════════════════╗\n║ Looks like you launched a headed browser without having a XServer running.                     ║\n║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║\n║                                                                                                ║\n║ <3 Playwright Team                                                                             ║\n╚════════════════════════════════════════════════════════════════════════════════════════════════╝\n=========================== logs ===========================\n<launching> /root/.cache/ms-playwright/chromium-1033/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-gwELP9 --remote-debugging-pipe --no-startup-window\n<launched> pid=276\n[pid=276][err] [276:276:0121/160128.287208:ERROR:ozone_platform_x11.cc(238)] Missing X server or $DISPLAY\n[pid=276][err] [276:276:0121/160128.287260:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.\n============================================================\n",
+    "statusTrace" : "  File \"/usr/lib/python3.7/site-packages/pluggy/_callers.py\", line 39, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/lib/python3.7/site-packages/_pytest/fixtures.py\", line 1128, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/lib/python3.7/site-packages/_pytest/fixtures.py\", line 907, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n  File \"/app/tests/conftest.py\", line 18, in browser\n    headless=False, channel=browser_info.get(\"channel\"),slow_mo=500\n  File \"/usr/lib/python3.7/site-packages/playwright/sync_api/_generated.py\", line 12869, in launch\n    firefoxUserPrefs=mapping.to_impl(firefox_user_prefs),\n  File \"/usr/lib/python3.7/site-packages/playwright/_impl/_sync_base.py\", line 104, in _sync\n    return task.result()\n  File \"/usr/lib/python3.7/site-packages/playwright/_impl/_browser_type.py\", line 93, in launch\n    Browser, from_channel(await self._channel.send(\"launch\", params))\n  File \"/usr/lib/python3.7/site-packages/playwright/_impl/_connection.py\", line 45, in send\n    lambda: self.inner_send(method, params, False)\n  File \"/usr/lib/python3.7/site-packages/playwright/_impl/_connection.py\", line 419, in wrap_api_call\n    return await cb()\n  File \"/usr/lib/python3.7/site-packages/playwright/_impl/_connection.py\", line 79, in inner_send\n    result = next(iter(done)).result()\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Search"
+  }, {
+    "name" : "tag",
+    "value" : "US"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSearch"
+  }, {
+    "name" : "host",
+    "value" : "2282cb13cffc"
+  }, {
+    "name" : "thread",
+    "value" : "16-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "rest_of_search",
+    "value" : "' at DuckDuckGo'"
+  }, {
+    "name" : "searches",
+    "value" : "'panda'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "US" ]
+  },
+  "source" : "3ccd96d6c6ed5b96.json",
+  "parameterValues" : [ "' at DuckDuckGo'", "'panda'" ]
+}
