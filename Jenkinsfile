@@ -4,6 +4,19 @@ environment {
     PATH = "$PATH:/usr/local/bin/"
 }
 stages {
+    stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            choice(
+                                choices: ['safari', 'chrome','firefox'], 
+                                name: '${BrowserName}'
+                            )])
+                    ])
+                    }
+            }
+    }
     stage('Checkout') {
     steps {
         script {
