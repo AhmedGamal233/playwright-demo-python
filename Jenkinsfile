@@ -1,11 +1,10 @@
 pipeline {
-    agent { docker { image 'playw_python' } }
+agent any
 stages {
-    stage('Build Docker Image') {  
-    steps{                     
-    sh 'docker-compose build'     
-    echo 'Docker-compose-build Build Image Completed'                
-    }           
-}
+    stage('e2e-tests') {
+        steps {
+        sh 'docker-compose run tests'
+        }
+    }
 }
 }
