@@ -9,7 +9,7 @@ greenlet==2.0.1
 idna==3.4
 iniconfig==2.0.0
 packaging==23.0
-playwright==1.29
+playwright==1.30.0
 pluggy==1.0.0
 py==1.11.0
 pyee==9.0.4

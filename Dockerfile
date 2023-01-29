@@ -43,7 +43,7 @@ ADD execute_tests.sh /
 
 ADD pages /app
 ADD venv /app
-ADD allure-results /app
+# ADD allure-results /app
 
 RUN pip install --upgrade pip && \
     pip install virtualenv && \
